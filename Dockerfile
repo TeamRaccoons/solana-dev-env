@@ -16,6 +16,8 @@ RUN cargo install --git https://github.com/project-serum/anchor --tag $ANCHOR_VE
 RUN curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
 RUN apt-get install -y nodejs
 
+RUN npm install --global yarn
+
 COPY shell-exec.sh /bin/shell-exec
 RUN chmod +x /bin/shell-exec
 
